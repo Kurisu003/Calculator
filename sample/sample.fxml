@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CalculatorController">
+   <top>
+      <Label fx:id="label" alignment="TOP_RIGHT" contentDisplay="TOP" maxWidth="1.7976931348623157E308" minHeight="100.0" prefWidth="50.0" style="-fx-background-color: #242424;" text="0" textFill="WHITE" BorderPane.alignment="BOTTOM_RIGHT">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+   </top>
+   <center>
+      <GridPane hgap="2.0" style="-fx-background-color: #252524;" vgap="2.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="\%" textFill="WHITE">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#functionClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="CE" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#functionClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="C" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#functionClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="&lt;-" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button fx:id="openBrackets" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#operationClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="(" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="30.0" />
+               </font></Button>
+            <Button fx:id="closedBrackets" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#operationClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text=")" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="^2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#operationClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="7" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#operationClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="4" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#operationClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="1" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#operationClickHandler" onMouseEntered="#changeBackgroundColorFuncKeys" onMouseExited="#changeBackgroundColorFuncKeys" style="-fx-background-color: #161616;" text="/" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button id="π" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#operationClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="π" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#digitClickHandler" onMouseEntered="#changeBackgroundColorNumbers" onMouseExited="#changeBackgroundColorNumbers" style="-fx-background-color: #070707;" text="." textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="30.0" />
+               </font></Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#functionClickHandler" onMouseEntered="#changeBackgroundColorEquals" onMouseExited="#changeBackgroundColorEquals" style="-fx-background-color: #343332;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>
